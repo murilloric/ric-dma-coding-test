@@ -1,16 +1,12 @@
 MASTERAPP.controller('homeCtrl', ['$scope', 'ricsAPI', function ($scope, ricsAPI) {
+	///sort and order movies
 	$scope.sort_property = 'title'
-	$scope.sortBy = function(){
-		console.log('yes')
-	}
+	$scope.sort_order = false
 
+	//load movie data
 	ricsAPI.searchForMovies(function(resp){
-		console.log(resp)
-		$scope.movie_data = resp
+		$scope.movie_data = resp;
 
-	})
+	});
 
-
-
-	// init();
 }]);

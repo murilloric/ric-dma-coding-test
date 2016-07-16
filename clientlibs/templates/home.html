@@ -16,17 +16,26 @@
 			    	<div class="input-label">
 			      	Sort By
 			    	</div>
-				    <select ng-model="sort_property" ng-change="SortBy()">>
+				    <select ng-model="sort_property">
 				      <option value="date">Date</option>
 				      <option value="title" selected>Name</option>
 				    </select>
 			  	</label>
+			  	<li class="item item-toggle">
+				    OrderBy: {{(sort_order)?'Desending':'Ascending'}}
+				     <label class="toggle toggle-positive">
+				       <input type="checkbox" ng-model="sort_order">
+				       <div class="track">
+				         <div class="handle"></div>
+				       </div>
+				     </label>
+				  </li>
 			  </div>
 			</div>
 		</div>
 
 		<div class="item item-text-wrap">
-			<div class="list item item-image item-icon-left" ng-repeat="movie in movie_data.items | orderBy:sort_property">
+			<div class="list item item-image item-icon-left" ng-repeat="movie in movie_data.items | orderBy:sort_property:sort_order">
 			      <div class="row">
 			      	<div class="col col-25">
 			      		<img ng-src="/clientlibs/{{movie.image}}">
