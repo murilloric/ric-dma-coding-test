@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="masterapp">
 <head>
-    <title>Ric Murillo</title>
+    <title>DMA - movie list</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <link rel="stylesheet" type="text/css" href="/clientlibs/dep/ionic-v1.2.0/css/ionic.min.css">
@@ -15,18 +15,18 @@
         }
       }
 
-      .pane{
+  /*    .pane{
             background-color:#444;
         }
-
-        body{
+*/
+/*        body{
             background-color:#444;
-        }
+        }*/
 
         .pg-badge{
             background:black;
             color:white;
-            padding:2px; 
+            padding:3px; 
             font-size:18px;
             border-radius: 2px;
         }
@@ -50,10 +50,15 @@
     <ion-nav-view></ion-nav-view>
 
 
-	<script type="text/javascript" src="/clientlibs/js/app.js"></script>
-	<script type="text/javascript" src="/clientlibs/js/services.js"></script>
-	<script type="text/javascript" src="/clientlibs/js/filters.js"></script>
-	<script type="text/javascript" src="/clientlibs/js/controller.js"></script>
+    ////PROD  run gulp to concat and min files
+    <script type="text/javascript" src="/clientlibs/min/app.min.js"></script>
+
+
+    //// DEV STATIC FILES
+<!-- 	// <script type="text/javascript" src="/clientlibs/js/app.js"></script>
+	// <script type="text/javascript" src="/clientlibs/js/services.js"></script>
+	// <script type="text/javascript" src="/clientlibs/js/filters.js"></script>
+	// <script type="text/javascript" src="/clientlibs/js/controller.js"></script> -->
 </body>
 
 </html>
