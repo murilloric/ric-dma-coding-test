@@ -1,14 +1,12 @@
-MASTERAPP.controller('homeCtrl', ['$scope', '$http', 'ricsAPI', function ($scope, $http, ricsAPI) {
-	console.log('mainCtrl');
-	$scope.user = {"name":"Ric Murillo", "title":"Software Engineer", "location": "Los Angeles"}
+MASTERAPP.controller('homeCtrl', ['$scope', 'ricsAPI', function ($scope, ricsAPI) {
 	
-	function init(){
-		// ricsAPI.accessPassport(function(resp){
-		// 	console.log("resp", resp);
-		// 	$scope.user = resp.data
-		// });
-	}
+	ricsAPI.searchForMovies(function(resp){
+		console.log(resp)
+		$scope.movie_data = resp
+
+	})
 
 
-	init();
+
+	// init();
 }]);

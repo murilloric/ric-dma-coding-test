@@ -26,20 +26,20 @@
 		</div>
 
 		<div class="item item-text-wrap">
-			<div class="list item item-image item-icon-left">
+			<div class="list item item-image item-icon-left" ng-repeat="movie in movie_data.items">
 			      <div class="row">
 			      	<div class="col col-25">
-			      		<img src="/clientlibs/img/movie-thumb_1c02f92da5b7c_web__027649.jpg">
+			      		<img ng-src="/clientlibs/{{movie.image}}">
 			      	</div>
 				  	<div class="col text-left">
-				  		<h1>Toy Story  <span class="pg-badge">PG-13</span>
+				  		<h1>{{movie.title}} <span class="pg-badge">{{movie.rating | uppercase}}</span>
 
 				  		</h1>
 				  		<button class="button button-small button-dark">Add to Watchlist</button>
 				  	</div>
 				  	<div class="col text-left">
-				  		<h3>Release Date April 30, 2008</h3>
-				  		<h3>Run Time 2hrs 6mins</h3>
+				  		<h3>Release Date {{movie.date | date:'longDate'}}</h3>
+				  		<h3>Run Time {{movie.run_time | runTime}}</h3>
 				  	</div>
 				  </div>
 
