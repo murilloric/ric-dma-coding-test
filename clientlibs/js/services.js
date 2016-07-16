@@ -1,5 +1,5 @@
 MASTERAPP.factory('ricsAPI', ['$http', '$state', '$cookies', '$ionicPopup', function($http, $state, $cookies, $ionicPopup){
-	movie_data = {
+	var movie_data = {
     "items": [{
         "image": "img/movie-thumb_1c02f92da5b7c_web__027649.jpg",
         "title": "Toy Story",
@@ -107,9 +107,12 @@ MASTERAPP.factory('ricsAPI', ['$http', '$state', '$cookies', '$ionicPopup', func
 
 	var service = {}
 
-	service.searchForMovies = function(callBack){
-
-		return callBack(movie_data)
+	service.searchForMovies = function(search_term, callBack){
+		var search_result = []
+		if(search_term === 'all'){
+			search_result = movie_data
+		}
+		return callBack(search_result)
 
 	}
 
