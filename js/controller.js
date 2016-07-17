@@ -7,7 +7,7 @@ MASTERAPP.controller('homeCtrl', ['$scope', 'ricsAPI', function ($scope, ricsAPI
 	$scope.search = {movie_title:''}
 
 	//load movie data
-	ricsAPI.searchForMovies('all', function(resp){
+	ricsAPI.searchApp('all', function(resp){
 		$scope.movie_data = resp;
 	});
 

@@ -11,7 +11,7 @@ MASTERAPP.config(['$stateProvider', '$ionicConfigProvider', '$urlRouterProvider'
 
   $stateProvider.state('home', {
     url: '/home',
-    templateUrl: '/clientlibs/templates/home.html',
+    templateUrl: '/partials/home.html',
     controller:'homeCtrl'
   })
 

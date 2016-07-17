@@ -1,43 +1,17 @@
 <!DOCTYPE html>
 <html ng-app="masterapp">
 <head>
-    <title>DMA - movie list</title>
+    <title>RICS - starter app</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <link rel="stylesheet" type="text/css" href="/clientlibs/dep/ionic-v1.2.0/css/ionic.min.css">
+    
+    <!-- build:remove -->
+    <link rel="stylesheet" type="text/css" href="/dep/ionic-v1.2.0/css/ionic.min.css">
+     <!-- /build -->
 
-    <style>
-      @media (min-width: 600px) {
-
-        .pane{
-            margin: auto;
-            width:60%;
-        }
-      }
-
-  /*    .pane{
-            background-color:#444;
-        }
-*/
-/*        body{
-            background-color:#444;
-        }*/
-
-        .pg-badge{
-            background:black;
-            color:white;
-            padding:3px; 
-            font-size:18px;
-            border-radius: 2px;
-        }
-
-        .text-left{
-            text-align:left;
-        }
-    </style>
-
-    <script type="text/javascript" src="/clientlibs/dep/ionic-v1.2.0/js/ionic.bundle.min.js"></script>
-    <script type="text/javascript" src="/clientlibs/dep/ionic-v1.2.0/js/angular/angular-cookies.min.js"></script>
+     <!-- build:css /css/app.min.css -->
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+     <!-- /build -->
 </head>
 <body>
 
@@ -49,18 +23,20 @@
     <!--MAIN VIEW-->
     <ion-nav-view></ion-nav-view>
 
+    <!-- build:remove -->
+    <script type="text/javascript" src="/dep/ionic-v1.2.0/js/ionic.bundle.min.js"></script>
+    <script type="text/javascript" src="/dep/ionic-v1.2.0/js/angular/angular-cookies.min.js"></script>
+     <!-- /build -->
 
-    ////PROD  run gulp to concat and min files
-    <script type="text/javascript" src="/clientlibs/min/app.min.js"></script>
-    
+    <!-- build:js /js/app.min.js -->
+    <script type="text/javascript" src="/js/app.js"></script>
+    <!-- /build -->
 
-    //// DEV STATIC FILES
-
- //    <!-- <script type="text/javascript" src="/clientlibs/js/app.js"></script>
-	// <script type="text/javascript" src="/clientlibs/js/services.js"></script>
-	// <script type="text/javascript" src="/clientlibs/js/filters.js"></script>
-	// <script type="text/javascript" src="/clientlibs/js/controller.js"></script> -->
-
+    <!-- build:remove -->
+	<script type="text/javascript" src="/js/services.js"></script>
+	<script type="text/javascript" src="/js/filters.js"></script>
+	<script type="text/javascript" src="/js/controller.js"></script>
+     <!-- /build -->
 </body>
 
 </html>
